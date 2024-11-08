@@ -1,0 +1,123 @@
+.landing-section{
+    text-align: center;
+    height: 100vh;
+    background-image: url("/images/home.webp");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.d-flex{
+    padding: 0;
+    display: flex !important;
+}
+
+.desktop-only{
+    display: block;
+}
+
+.monument-one{
+    animation: monument-one 10s linear;
+    animation-iteration-count: infinite;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.monument-two{
+    animation: monument-two 10s linear;
+    animation-iteration-count: infinite;
+    width: 100vw;
+    position: absolute;
+    left: -100vw;
+    bottom: 0;
+}
+
+.balloons{
+    animation: fly-up 20s linear;
+    animation-iteration-count: infinite;
+    position: relative;
+    bottom: -50vw;
+    height: fit-content;
+}
+
+.layer-2{
+    z-index: 1;
+    position: absolute;
+    left: 0vw;
+    width: 100vw;
+}
+
+.layer-1{
+    z-index: 0;
+    position: absolute;
+    left: 0vw;
+    width: 100vw;
+}
+
+.mobile-only{
+    display: none;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+@media only screen and (max-width: 990px) {
+    .mobile-only {
+        display: block;
+    }
+}
+
+
+
+img{
+    vertical-align: middle;
+}
+
+@keyframes monument-one {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100vw;
+    }
+}
+
+@keyframes monument-two {
+    0%{  
+        left: -100vw;
+
+    } 
+
+    100%{
+        left: 0vw;
+    }
+}
+
+@keyframes fly-up {
+    0%{
+        bottom: -70vh;
+    }
+    20%{
+        bottom: 0vh;
+    }
+    32%{
+        bottom: -10vh;
+    }
+    44%{
+        bottom: 0vh;
+    }
+    56%{
+        bottom: -10vh;
+    }
+    68%{
+        bottom: 0vh;
+    }
+    80%{
+        bottom: -10vh;
+    }
+    100%{
+        bottom: 100vh;
+    }
+
+}
